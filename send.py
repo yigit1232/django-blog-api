@@ -2,7 +2,7 @@ import requests
 
 while True:
     key = input('Search... ')
-    request = requests.get(f'http://127.0.0.1:8000/search/?q={key}')
+    request = requests.get(f'http://127.0.0.1:8000/api/post/list/?q={key}')
     request.text
     response = request.json()
     if 'error' in response:
